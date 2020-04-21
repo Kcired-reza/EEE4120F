@@ -2,6 +2,9 @@
 2019.2
 Nov  6 2019
 21:57:16
+C:/Users/Derick Nyende/Documents/EEE4120F - High Performance ES/EEE4120F-Pracs-master/Prac4/Clock.v,1587477864,verilog,,C:/Users/Derick Nyende/Documents/GitHub/EEE4120F/Prac_4/Prac_4.srcs/sources_1/new/ClockDiv.v,,WallClock,,,,,,,,
+C:/Users/Derick Nyende/Documents/EEE4120F - High Performance ES/EEE4120F-Pracs-master/Prac4/Delay_Reset.v,1585304701,verilog,,C:/Users/Derick Nyende/Documents/GitHub/EEE4120F/Prac_4/Prac_4.srcs/sim_1/new/testbench_WallClock.v,,Delay_Reset,,,,,,,,
 C:/Users/Derick Nyende/Documents/GitHub/EEE4120F/Prac_4/Prac_4.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
 C:/Users/Derick Nyende/Documents/GitHub/EEE4120F/Prac_4/Prac_4.srcs/sim_1/new/testbench.v,1587395276,verilog,,,,testbench,,,,,,,,
-C:/Users/Derick Nyende/Documents/GitHub/EEE4120F/Prac_4/Prac_4.srcs/sources_1/new/ClockDiv.v,1587395945,verilog,,C:/Users/Derick Nyende/Documents/GitHub/EEE4120F/Prac_4/Prac_4.srcs/sim_1/new/testbench.v,,ClockDiv,,,,,,,,
+C:/Users/Derick Nyende/Documents/GitHub/EEE4120F/Prac_4/Prac_4.srcs/sim_1/new/testbench_WallClock.v,1587478053,verilog,,,,testbench_WallClock,,,,,,,,
+C:/Users/Derick Nyende/Documents/GitHub/EEE4120F/Prac_4/Prac_4.srcs/sources_1/new/ClockDiv.v,1587470821,verilog,,C:/Users/Derick Nyende/Documents/GitHub/EEE4120F/Prac_4/Prac_4.srcs/sim_1/new/testbench_WallClock.v,,ClockDiv,,,,,,,,

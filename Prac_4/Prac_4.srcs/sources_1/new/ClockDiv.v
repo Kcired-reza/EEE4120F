@@ -2,10 +2,10 @@
 
 module ClockDiv(
     input wire clk,             //100 MHz clock 
-    output reg clk_div  = 0     // Clock at 1 Hz
+    output reg clk_div  = 1     // Clock at 1 Hz
     );
 
-integer div_val = 49999999;    
+localparam div_val = 49999999;    
 // div_val = 100 Mhz/(2*wanted freq) - 1
 integer counter = 0;
 

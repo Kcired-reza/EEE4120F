@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../../EEE4120F - High Performance ES/EEE4120F-Pracs-master/Prac4/Clock.v" \
+"../../../../Prac_4.srcs/sources_1/new/ClockDiv.v" \
+"../../../../Prac_4.srcs/sim_1/new/testbench_WallClock.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
