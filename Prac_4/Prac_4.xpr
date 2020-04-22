@@ -59,7 +59,7 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../EEE4120F - High Performance ES/EEE4120F-Pracs-master/Prac4/BCD_Decoder.v">
+      <File Path="$PSRCDIR/sources_1/new/BCD_Decoder.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -73,28 +73,28 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../EEE4120F - High Performance ES/EEE4120F-Pracs-master/Prac4/Delay_Reset.v">
+      <File Path="$PSRCDIR/sources_1/new/Delay_Reset.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../EEE4120F - High Performance ES/EEE4120F-Pracs-master/Prac4/SS_Driver.v">
+      <File Path="$PSRCDIR/sources_1/new/SS_Driver.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../EEE4120F - High Performance ES/EEE4120F-Pracs-master/Prac4/Clock.v">
+      <File Path="$PSRCDIR/sources_1/new/Clock.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../EEE4120F - High Performance ES/EEE4120F-Pracs-master/Prac4/Debounce.v">
+      <File Path="$PSRCDIR/sources_1/new/Debounce.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -102,7 +102,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../EEE4120F - High Performance ES/EEE4120F-Pracs-master/Prac4/PWM.v">
+      <File Path="$PSRCDIR/sources_1/new/PWM.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
