@@ -22,6 +22,9 @@ module WallClock(
 	reg [3:0]mins1=4'd0;   // ones minutes
 	reg [3:0]mins2=4'd0;   // tens minutes
 	reg [5:0] secs = 6'd0;
+	
+	// Assign Seconds to LEDs
+	assign LED = secs;
     
 	//Initialize seven segment
 	// You will need to change some signals depending on you constraints
