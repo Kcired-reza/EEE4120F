@@ -3,12 +3,14 @@
 module WallClock(
 	input wire CLK100MHZ, // 100 MHz clock                  inputs - these will depend on your board's constraint files
     output wire [3:0] an, // 4 digits of 7 seg display      outputs - these will depend on your board's constraint files
-	output wire [6:0] seg // 7 segements of 7 seg display
+	output wire [7:0] seg, // 7 segements of 7 seg display
+	output wire [5:0] LED  // outputs seconds to LEDs in binary
 );
 
 	//Add the reset
-	reg Reset;
-    Delay_Reset Reset0 (CLK100MHZ, BTNC, Reset);
+	wire Reset_0;
+	reg Reset_1=0;
+    Delay_Reset Reset0 (CLK100MHZ, BTNC, Reset_0);
 
 	//Add and debounce the buttons
 	wire MButton;
@@ -29,20 +31,27 @@ module WallClock(
 	//Initialize seven segment
 	// You will need to change some signals depending on you constraints
 	SS_Driver SS_Driver1(
-		CLK100MHZ, Reset,
+		CLK100MHZ, Reset_1,
 		4'd1, 4'd2, 4'd3, 4'd4, // Use temporary test values before adding hours2, hours1, mins2, mins1
-		an[3:0], seg[6:0]
+		an[3:0], seg[7:0]
 	);
 	
 	// 1 Hz clock divider
-	reg CLK1HZ;    // stores value of 1 Hz Clock
-	
+	reg CLK1HZ=1;    // stores value of 1 Hz Clock
+	wire clk1HZ;
+	//assign CLK1HZ = clk1HZ;
 	ClockDiv   SecCounter(
 	   CLK100MHZ,  // 100 Mhz Clock
-	   CLK1HZ      // 1 Hz Clock
+	   clk1HZ      // 1 Hz Clock
 	);
 	//The main logic
-	always @(posedge CLK1HZ) begin     // Run whenever 1 second passes
+	
+	always @(posedge CLK100MHZ) begin
+	   CLK1HZ = clk1HZ;
+	   Reset_1 = Reset_0;
+	end
+	
+	always @(posedge clk1HZ) begin     // Run whenever 1 second passes
 		// implement your logic here
 		if (secs == 59) begin
 		  secs <= 0;  // Reset to 0 each when 60 secs have passed

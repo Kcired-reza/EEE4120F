@@ -2,12 +2,14 @@
 
 module ClockDiv(
     input wire clk,             //100 MHz clock 
-    output reg clk_div  = 1     // Clock at 1 Hz
+    output wire clk_div     // Clock at 1 Hz
     );
 
-localparam div_val = 49999999;    
+localparam div_val = 49;//49999999;    
 // div_val = 100 Mhz/(2*wanted freq) - 1
 integer counter = 0;
+reg clk0 = 1;
+assign clk_div = clk0;
 
 always@ (posedge clk)
 begin
@@ -20,8 +22,8 @@ end
 always@ (posedge clk)
 begin
     if (counter == div_val)
-        clk_div <= ~clk_div;
+        clk0 <= ~clk0;
     else
-        clk_div <= clk_div;
+        clk0 <= clk0;
 end
 endmodule

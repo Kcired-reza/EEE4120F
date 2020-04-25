@@ -1,0 +1,7 @@
+Running: xsim.dir/testbench_WallClock_behav/xsimk.exe -simmode gui -wdb testbench_WallClock_behav.wdb -simrunnum 0 -socket 51276
+Design successfully loaded
+Design Loading Memory Usage: 5204 KB (Peak: 5204 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 13968 KB (Peak: 13968 KB)
+Simulation CPU Usage: 100108 ms
