@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.2.1 (64-bit)
+# SW Build 2729669 on Thu Dec  5 04:49:17 MST 2019
+# IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+# Start of session at: Sat May  2 20:58:07 2020
+# Process ID: 57068
+# Current directory: C:/Users/kaibr/Desktop/My Files/UCT Work/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/kaibr/Desktop/My Files/UCT Work/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim/xsim.dir/tb_WallClock_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/kaibr/Desktop/My Files/UCT Work/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim/webtalk.log
+# Journal file: C:/Users/kaibr/Desktop/My Files/UCT Work/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/kaibr/Desktop/My -notrace
