@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../Prac_4_KAI/Prac_4.srcs/sources_1/new/BCD_Decoder.v" \
+"../../../../../Prac_4_KAI/Prac_4.srcs/sources_1/new/Clock.v" \
+"../../../../../Prac_4_KAI/Prac_4.srcs/sources_1/new/ClockDiv.v" \
+"../../../../../Prac_4_KAI/Prac_4.srcs/sources_1/new/Debounce.v" \
+"../../../../../Prac_4_KAI/Prac_4.srcs/sources_1/new/Delay_Reset.v" \
+"../../../../../Prac_4_KAI/Prac_4.srcs/sources_1/new/SS_Driver.v" \
+"../../../../Prac_4.srcs/Sim_Debounce/new/tb_WallClock.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
