@@ -1,7 +1,7 @@
-Running: xsim.dir/tb_WallClock_behav/xsimk.exe -simmode gui -wdb tb_WallClock_behav.wdb -simrunnum 0 -socket 50999
+Running: xsim.dir/tb_WallClock_behav/xsimk.exe -simmode gui -wdb tb_WallClock_behav.wdb -simrunnum 0 -socket 57941
 Design successfully loaded
-Design Loading Memory Usage: 5316 KB (Peak: 5316 KB)
-Design Loading CPU Usage: 0 ms
+Design Loading Memory Usage: 5352 KB (Peak: 5352 KB)
+Design Loading CPU Usage: 31 ms
 Simulation completed
-Simulation Memory Usage: 6016 KB (Peak: 6016 KB)
-Simulation CPU Usage: 0 ms
+Simulation Memory Usage: 6048 KB (Peak: 6048 KB)
+Simulation CPU Usage: 31 ms

@@ -14,8 +14,8 @@ module WallClock(
     Delay_Reset Reset0 (CLK100MHZ, BTNC, Reset_0);
     
 	//Add and debounce the buttons
-	wire MButton;      //output of sw0_deb, debounced output
-	wire HButton;      //output of sw1_deb, debounced output
+	wire Mbutton;      //output of sw0_deb, debounced output
+	wire Hbutton;      //output of sw1_deb, debounced output
 	reg Mprev = 0;     //previous Mbutton state, to check rising edge
 	reg Hprev = 0;     //previous Hbutton state, to check rising edge
 	
@@ -98,8 +98,8 @@ module WallClock(
                 hours1 <= hours1 + 1;   // Increase by 1 every hour that passes
         end
         //update previous states
-        Mprev <= Mbutton;   
-        Hprev <= Hbutton;
+        Mprev = Mbutton;   
+        Hprev = Hbutton;
     end
     
     // Run whenever 1 second passes

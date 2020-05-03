@@ -1,0 +1,380 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun May  3 16:10:31 2020
+# Process ID: 11708
+# Current directory: C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13492 C:\Users\kaibr\Desktop\Kais Files\UCT\EEE4120F\Prac 4\Prac_4\Prac_4.xpr
+# Log file: C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/vivado.log
+# Journal file: C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/kaibr/Desktop/My Files/UCT Work/EEE4120F/Prac 4/Prac_4' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 700.668 ; gain = 95.441
+update_compile_order -fileset sources_1
+launch_simulation -simset [get_filesets Debounce_Sim ]
+Command: launch_simulation -simset Debounce_Sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Debounce_Sim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_WallClock' in fileset 'Debounce_Sim'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Debounce_Sim'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+"xvlog --incr --relax -prj tb_WallClock_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BCD_Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WallClock
+INFO: [VRFC 10-2458] undeclared symbol BTNC, assumed default net type wire [C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Clock.v:14]
+INFO: [VRFC 10-2458] undeclared symbol Mbutton, assumed default net type wire [C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Clock.v:23]
+INFO: [VRFC 10-2458] undeclared symbol Hbutton, assumed default net type wire [C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Clock.v:24]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/ClockDiv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ClockDiv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Debounce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Debounce
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Delay_Reset.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Delay_Reset
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/SS_Driver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SS_Driver
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/Debounce_Sim/tb_WallClock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WallClock
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+"xelab -wto 9f37bce2f1014ae89857aacf94435f3d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WallClock_behav xil_defaultlib.tb_WallClock xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 9f37bce2f1014ae89857aacf94435f3d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WallClock_behav xil_defaultlib.tb_WallClock xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" Line 1. Module BCD_Decoder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" Line 1. Module BCD_Decoder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" Line 1. Module BCD_Decoder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" Line 1. Module BCD_Decoder doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Delay_Reset
+Compiling module xil_defaultlib.Debounce
+Compiling module xil_defaultlib.BCD_Decoder
+Compiling module xil_defaultlib.SS_Driver
+Compiling module xil_defaultlib.ClockDiv
+Compiling module xil_defaultlib.WallClock
+Compiling module xil_defaultlib.tb_WallClock
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_WallClock_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_WallClock_behav -key {Behavioral:Debounce_Sim:Functional:tb_WallClock} -tclbatch {tb_WallClock.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_WallClock.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_WallClock_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 741.621 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset Debounce_Sim -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Debounce_Sim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_WallClock' in fileset 'Debounce_Sim'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Debounce_Sim'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+"xvlog --incr --relax -prj tb_WallClock_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BCD_Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WallClock
+INFO: [VRFC 10-2458] undeclared symbol BTNC, assumed default net type wire [C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Clock.v:14]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/ClockDiv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ClockDiv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Debounce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Debounce
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Delay_Reset.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Delay_Reset
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/SS_Driver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SS_Driver
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/Debounce_Sim/tb_WallClock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WallClock
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset Debounce_Sim -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+"xelab -wto 9f37bce2f1014ae89857aacf94435f3d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WallClock_behav xil_defaultlib.tb_WallClock xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 9f37bce2f1014ae89857aacf94435f3d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WallClock_behav xil_defaultlib.tb_WallClock xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" Line 1. Module BCD_Decoder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" Line 1. Module BCD_Decoder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" Line 1. Module BCD_Decoder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" Line 1. Module BCD_Decoder doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Delay_Reset
+Compiling module xil_defaultlib.Debounce
+Compiling module xil_defaultlib.BCD_Decoder
+Compiling module xil_defaultlib.SS_Driver
+Compiling module xil_defaultlib.ClockDiv
+Compiling module xil_defaultlib.WallClock
+Compiling module xil_defaultlib.tb_WallClock
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_WallClock_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 743.133 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset Debounce_Sim -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Debounce_Sim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_WallClock' in fileset 'Debounce_Sim'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Debounce_Sim'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+"xvlog --incr --relax -prj tb_WallClock_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset Debounce_Sim -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+"xelab -wto 9f37bce2f1014ae89857aacf94435f3d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WallClock_behav xil_defaultlib.tb_WallClock xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 9f37bce2f1014ae89857aacf94435f3d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WallClock_behav xil_defaultlib.tb_WallClock xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 745.621 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset Debounce_Sim -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Debounce_Sim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_WallClock' in fileset 'Debounce_Sim'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Debounce_Sim'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+"xvlog --incr --relax -prj tb_WallClock_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BCD_Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WallClock
+INFO: [VRFC 10-2458] undeclared symbol BTNC, assumed default net type wire [C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Clock.v:14]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/ClockDiv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ClockDiv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Debounce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Debounce
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Delay_Reset.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Delay_Reset
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/SS_Driver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SS_Driver
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/Debounce_Sim/tb_WallClock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WallClock
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset Debounce_Sim -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+"xelab -wto 9f37bce2f1014ae89857aacf94435f3d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WallClock_behav xil_defaultlib.tb_WallClock xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 9f37bce2f1014ae89857aacf94435f3d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WallClock_behav xil_defaultlib.tb_WallClock xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" Line 1. Module BCD_Decoder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" Line 1. Module BCD_Decoder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" Line 1. Module BCD_Decoder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" Line 1. Module BCD_Decoder doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Delay_Reset
+Compiling module xil_defaultlib.Debounce
+Compiling module xil_defaultlib.BCD_Decoder
+Compiling module xil_defaultlib.SS_Driver
+Compiling module xil_defaultlib.ClockDiv
+Compiling module xil_defaultlib.WallClock
+Compiling module xil_defaultlib.tb_WallClock
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_WallClock_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 748.270 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset Debounce_Sim -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Debounce_Sim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_WallClock' in fileset 'Debounce_Sim'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Debounce_Sim'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+"xvlog --incr --relax -prj tb_WallClock_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BCD_Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WallClock
+INFO: [VRFC 10-2458] undeclared symbol BTNC, assumed default net type wire [C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Clock.v:14]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/ClockDiv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ClockDiv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Debounce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Debounce
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Delay_Reset.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Delay_Reset
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/SS_Driver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SS_Driver
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/Debounce_Sim/tb_WallClock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_WallClock
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset Debounce_Sim -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+"xelab -wto 9f37bce2f1014ae89857aacf94435f3d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WallClock_behav xil_defaultlib.tb_WallClock xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 9f37bce2f1014ae89857aacf94435f3d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WallClock_behav xil_defaultlib.tb_WallClock xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" Line 1. Module BCD_Decoder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" Line 1. Module BCD_Decoder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" Line 1. Module BCD_Decoder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/BCD_Decoder.v" Line 1. Module BCD_Decoder doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Delay_Reset
+Compiling module xil_defaultlib.Debounce
+Compiling module xil_defaultlib.BCD_Decoder
+Compiling module xil_defaultlib.SS_Driver
+Compiling module xil_defaultlib.ClockDiv
+Compiling module xil_defaultlib.WallClock
+Compiling module xil_defaultlib.tb_WallClock
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_WallClock_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 751.930 ; gain = 0.000
+add_bp {C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.srcs/sources_1/Debounce.v} 11
+relaunch_sim
+Command: launch_simulation -simset Debounce_Sim -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Debounce_Sim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_WallClock' in fileset 'Debounce_Sim'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Debounce_Sim'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+"xvlog --incr --relax -prj tb_WallClock_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset Debounce_Sim -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+"xelab -wto 9f37bce2f1014ae89857aacf94435f3d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WallClock_behav xil_defaultlib.tb_WallClock xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 9f37bce2f1014ae89857aacf94435f3d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WallClock_behav xil_defaultlib.tb_WallClock xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+ERROR: [Simulator 45-7] No such file 'C:/Users/kaibr/Desktop/Kais' in the design.
+ERROR: [Common 17-69] Command failed: ERROR: [Simulator 45-7] No such file 'C:/Users/kaibr/Desktop/Kais' in the design.
+
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+open_project {C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation -simset [get_filesets Debounce_Sim ]
+Command: launch_simulation -simset Debounce_Sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Debounce_Sim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_WallClock' in fileset 'Debounce_Sim'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Debounce_Sim'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+"xvlog --incr --relax -prj tb_WallClock_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+"xelab -wto 9f37bce2f1014ae89857aacf94435f3d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WallClock_behav xil_defaultlib.tb_WallClock xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 9f37bce2f1014ae89857aacf94435f3d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_WallClock_behav xil_defaultlib.tb_WallClock xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/kaibr/Desktop/Kais Files/UCT/EEE4120F/Prac 4/Prac_4/Prac_4.sim/Debounce_Sim/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_WallClock_behav -key {Behavioral:Debounce_Sim:Functional:tb_WallClock} -tclbatch {tb_WallClock.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+ERROR: [Simulator 45-7] No such file 'C:/Users/kaibr/Desktop/Kais' in the design.
+
+ERROR: [USF-XSim-62] 'simulate' step failed with errors. Please check the Tcl console or log files for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun May  3 16:36:55 2020...
