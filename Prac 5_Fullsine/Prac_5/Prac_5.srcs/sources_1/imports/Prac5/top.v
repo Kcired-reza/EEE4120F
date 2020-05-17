@@ -53,14 +53,46 @@ module top(
 always @(posedge CLK100MHZ) begin   
     PWM <= douta; // tie memory output to the PWM input
     
-    f_base[8:0] = 746 + sw[7:0]; // get the "base" frequency to work from 
+    f_base[8:0] = 746 + sw[7:0]; // Base frequency is 262 Hz (middle C)
+    note_switch = note_switch + 1;
+    if (note_switch == 50000000) begin
+        note = note +1;
+        note_switch = 0;
+    end
     
     clkdiv <= clkdiv + 1;
-    
-    if (clkdiv >= 1493) begin
-        clkdiv[12:0] <= 0;
-        addra = addra + 1;
-    end;
+    case (note)
+        0: begin    // base note
+            if (clkdiv >= f_base*2) begin
+                clkdiv[12:0] <= 0;
+                addra = addra + 1;
+            end
+        end
+        1: begin    //1.25 faster
+            if (clkdiv >= f_base*5/4) begin
+                clkdiv[12:0] <= 0;
+                addra <= addra + 1;
+            end
+        end
+        2: begin    // 1.5 faster
+            if (clkdiv >= f_base*3/2) begin
+                clkdiv[12:0] <= 0;
+                addra <= addra + 1;
+            end
+        end
+        3: begin    // 2 times faster
+            if (clkdiv >= f_base) begin
+                clkdiv[12:0] <= 0;
+                addra <= addra + 1;
+            end
+        end
+        default: begin
+            if (clkdiv >= 1493) begin
+                clkdiv[12:0] <= 0;
+                addra <= addra + 1;
+            end
+        end
+    endcase;
     // Loop to change the output note IF we're in the arp state
     
 

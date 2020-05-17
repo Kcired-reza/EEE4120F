@@ -4,6 +4,20 @@ Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 39334815e1
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'sw' [C:/Users/Derick Nyende/Documents/GitHub/EEE4120F/Prac_5/Prac_5.srcs/sim_1/imports/new/C_testbench.v:16]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'sw' [C:/Users/Derick Nyende/Documents/GitHub/EEE4120F/Prac 5_Fullsine/Prac_5/Prac_5.srcs/sim_1/imports/new/C_testbench.v:16]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Debounce
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.blk_mem_gen_0
+Compiling module xil_defaultlib.pwm_module
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.C_testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot C_testbench_behav

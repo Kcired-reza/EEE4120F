@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="44" Path="C:/Users/Derick Nyende/Documents/GitHub/EEE4120F/Prac_5/Prac_5.xpr">
+<Project Version="7" Minor="44" Path="C:/Users/Derick Nyende/Documents/GitHub/EEE4120F/Prac 5_Fullsine/Prac_5/Prac_5.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="39334815e1a44b50be30d7285db3b249"/>
@@ -30,7 +30,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="nexys-a7-100t"/>
-    <Option Name="WTXSimLaunchSim" Val="18"/>
+    <Option Name="WTXSimLaunchSim" Val="19"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -61,7 +61,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/imports/Prac5/Debounce.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/Compressed/Prac5/Debounce.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/Compressed/Prac5/Debounce.v"/>
           <Attr Name="ImportTime" Val="1585304701"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -70,7 +70,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Prac5/PWM.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/Compressed/Prac5/PWM.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/Compressed/Prac5/PWM.v"/>
           <Attr Name="ImportTime" Val="1585304701"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -79,7 +79,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Prac5/top.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/Compressed/Prac5/top.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/Compressed/Prac5/top.v"/>
           <Attr Name="ImportTime" Val="1585304701"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -102,7 +102,7 @@
       <Filter Type="Constrs"/>
       <File Path="$PSRCDIR/constrs_1/imports/new/constraints.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Prac_4/Prac_4.srcs/constrs_1/new/constraints.xdc"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Prac_4/Prac_4.srcs/constrs_1/new/constraints.xdc"/>
           <Attr Name="ImportTime" Val="1587818070"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
