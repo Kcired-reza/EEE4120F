@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Prac_5.srcs/sources_1/ip/blk_mem_gen_1/sim/blk_mem_gen_1.v" \
+"../../../../Prac_5.srcs/sources_1/imports/Prac5/PWM.v" \
+"../../../../Prac_5.srcs/sources_1/imports/Prac5/top.v" \
+"../../../../Prac_5.srcs/sim_1/imports/new/C_testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

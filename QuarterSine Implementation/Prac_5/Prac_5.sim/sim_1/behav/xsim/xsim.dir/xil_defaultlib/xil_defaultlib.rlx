@@ -1,0 +1,9 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Users/kaibr/Desktop/Kais_Files/UCT/EEE4120F/Prac_5/QuarterSine Implementation/Prac_5/Prac_5.sim/sim_1/behav/xsim/glbl.v,1589710583,verilog,,,,glbl,,,,,,,,
+C:/Users/kaibr/Desktop/Kais_Files/UCT/EEE4120F/Prac_5/QuarterSine Implementation/Prac_5/Prac_5.srcs/sim_1/imports/new/C_testbench.v,1589749747,verilog,,,,C_testbench,,,,,,,,
+C:/Users/kaibr/Desktop/Kais_Files/UCT/EEE4120F/Prac_5/QuarterSine Implementation/Prac_5/Prac_5.srcs/sources_1/imports/Prac5/PWM.v,1589710584,verilog,,C:/Users/kaibr/Desktop/Kais_Files/UCT/EEE4120F/Prac_5/QuarterSine Implementation/Prac_5/Prac_5.srcs/sources_1/imports/Prac5/top.v,,pwm_module,,,,,,,,
+C:/Users/kaibr/Desktop/Kais_Files/UCT/EEE4120F/Prac_5/QuarterSine Implementation/Prac_5/Prac_5.srcs/sources_1/imports/Prac5/top.v,1589750230,verilog,,C:/Users/kaibr/Desktop/Kais_Files/UCT/EEE4120F/Prac_5/QuarterSine Implementation/Prac_5/Prac_5.srcs/sim_1/imports/new/C_testbench.v,,top,,,,,,,,
+C:/Users/kaibr/Desktop/Kais_Files/UCT/EEE4120F/Prac_5/QuarterSine Implementation/Prac_5/Prac_5.srcs/sources_1/ip/blk_mem_gen_1/sim/blk_mem_gen_1.v,1589738117,verilog,,C:/Users/kaibr/Desktop/Kais_Files/UCT/EEE4120F/Prac_5/QuarterSine Implementation/Prac_5/Prac_5.srcs/sources_1/imports/Prac5/PWM.v,,blk_mem_gen_1,,,,,,,,
