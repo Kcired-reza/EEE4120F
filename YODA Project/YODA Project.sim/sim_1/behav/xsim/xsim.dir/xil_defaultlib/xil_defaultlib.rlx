@@ -1,0 +1,10 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Users/Derick Nyende/Documents/GitHub/YODA Project/YODA Project.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/Users/Derick Nyende/Documents/GitHub/YODA Project/YODA Project.srcs/sim_1/new/Decoder_tb.v,1591382884,verilog,,,,Decoder_tb,,,,,,,,
+C:/Users/Derick Nyende/Documents/GitHub/YODA Project/YODA Project.srcs/sources_1/ip/bram_decoded_message/sim/bram_decoded_message.v,1591391173,verilog,,C:/Users/Derick Nyende/Documents/GitHub/YODA Project/YODA Project.srcs/sources_1/new/ClockDiv.v,,bram_decoded_message,,,,,,,,
+C:/Users/Derick Nyende/Documents/GitHub/YODA Project/YODA Project.srcs/sources_1/ip/bram_encoded_message/sim/bram_encoded_message.v,1591788279,verilog,,C:/Users/Derick Nyende/Documents/GitHub/YODA Project/YODA Project.srcs/sources_1/ip/bram_decoded_message/sim/bram_decoded_message.v,,bram_encoded_message,,,,,,,,
+C:/Users/Derick Nyende/Documents/GitHub/YODA Project/YODA Project.srcs/sources_1/new/ClockDiv.v,1591786392,verilog,,C:/Users/Derick Nyende/Documents/GitHub/YODA Project/YODA Project.srcs/sources_1/new/Decoder.v,,ClockDiv,,,,,,,,
+C:/Users/Derick Nyende/Documents/GitHub/YODA Project/YODA Project.srcs/sources_1/new/Decoder.v,1591788743,verilog,,C:/Users/Derick Nyende/Documents/GitHub/YODA Project/YODA Project.srcs/sim_1/new/Decoder_tb.v,,Decoder,,,,,,,,
