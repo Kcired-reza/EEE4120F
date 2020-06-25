@@ -23,28 +23,30 @@ for z in message
 end
 
 #-------------------------Retrieve Image Data:---------------------------
-imgO = load("YODA_image_original.jpg")
+imgO = load("YODA_zebra_original.jpg")
 imgG = rawview(channelview(Gray.(imgO)))
-save("YODA_image_original_grey.jpg", imgG)
+save("YODA_zebra_grey.jpg", imgG)
 
 #------------------------Encode Message:---------------------------------
+i = 1; #counter for encoding
 function encode(imgArr, msg)
-    i = 1   #counter for encoding progress
     mlen = size(msg)[1] #Length of secret message in bits
     n, m = size(imgArr); #Dimensions of Image
 
     for h in 1:n
         for w in 1:m    #loop through pixels
             lsb = UInt8(imgArr[h, w]%2);  #lsb of each pixel
+            #println(lsb)
+            #println(msg[i])
             if i <= mlen                #still encoding
                 if msg[i]==1 & lsb==0
                     println("INCREMENTED")
                     imgArr[h, w] += 1;
-                elseif msg[i]==1 & lsb==0
+                elseif msg[i]==0 & lsb==1
                     println("DECREMENTED")
                     imgArr[h, w] -= 1;
                 else
-                    println("continued...")
+                    #println("continued...")
                     continue            #pixel lsb and msgE[1] equal
                 end
             else                        #Past msg length, clear lsb
@@ -55,7 +57,7 @@ function encode(imgArr, msg)
                     println("ignored")
                 end
             end
-            i += 1
+            global i += 1
         end
     end
     return imgArr
@@ -64,7 +66,7 @@ end
 imgE = encode(imgG, msgE);
 
 #-----------------------Save Encoded Image:----------------------------
-save("YODA_image_encoded.jpg", imgE)
+save("YODA_zebra_encoded.jpg", imgE)
 
 #----------------------Decode Message:---------------------------------
 function decode(imgArr)
@@ -81,17 +83,21 @@ function decode(imgArr)
     return msg
 end
 
-#convert data to text
 msgD = decode(imgE) #Bits of ASCII Values
-mlen = size(msgD)[1] #Length of secret message in bits
-message2 = Vector{UInt8}(); #ASCII Values of the message
 
-for i in UInt(1):UInt(mlen/8) #loop for each byte in message2
-    append!(message2, UInt8(0));
-    for j in 1:8    #loop for each bit in each byte
-        message2[i] += (msgD[8*(i-1) + j] << (8 - j));
+#convert data to text
+function bitstotext(msg)
+    mlen = size(msg)[1] #Length of secret message in bits
+    message = Vector{UInt8}(); #ASCII Values of the message
+    for i in UInt(1):UInt(mlen/8) #loop for each byte in message2
+        append!(message, UInt8(0));
+        for j in 1:8    #loop for each bit in each byte
+            message[i] += (msg[8*(i-1) + j] << (8 - j));
+        end
     end
+    return message
 end
 
+message2 = bitstotext(msgD);
 msgFinal = String(message2);
-println(msgFinal);
+#println(msgFinal);
