@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.2.1 (64-bit)
+# SW Build 2729669 on Thu Dec  5 04:49:17 MST 2019
+# IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+# Start of session at: Wed Jun 24 18:21:34 2020
+# Process ID: 21768
+# Current directory: C:/Users/kaibr/Desktop/My Files/UCT Work/EEE4120F/_Group Repo/EEE4120F/YODA Project/YODA Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19584 C:\Users\kaibr\Desktop\My Files\UCT Work\EEE4120F\_Group Repo\EEE4120F\YODA Project\YODA Project\YODA Project.xpr
+# Log file: C:/Users/kaibr/Desktop/My Files/UCT Work/EEE4120F/_Group Repo/EEE4120F/YODA Project/YODA Project/vivado.log
+# Journal file: C:/Users/kaibr/Desktop/My Files/UCT Work/EEE4120F/_Group Repo/EEE4120F/YODA Project/YODA Project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/kaibr/Desktop/My Files/UCT Work/EEE4120F/_Group Repo/EEE4120F/YODA Project/YODA Project/YODA Project.xpr}
+update_compile_order -fileset sources_1

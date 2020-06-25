@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2019.2.1 (64-bit)
+# SW Build 2729669 on Thu Dec  5 04:49:17 MST 2019
+# IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+# Start of session at: Wed Jun 24 18:21:34 2020
+# Process ID: 21768
+# Current directory: C:/Users/kaibr/Desktop/My Files/UCT Work/EEE4120F/_Group Repo/EEE4120F/YODA Project/YODA Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19584 C:\Users\kaibr\Desktop\My Files\UCT Work\EEE4120F\_Group Repo\EEE4120F\YODA Project\YODA Project\YODA Project.xpr
+# Log file: C:/Users/kaibr/Desktop/My Files/UCT Work/EEE4120F/_Group Repo/EEE4120F/YODA Project/YODA Project/vivado.log
+# Journal file: C:/Users/kaibr/Desktop/My Files/UCT Work/EEE4120F/_Group Repo/EEE4120F/YODA Project/YODA Project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/kaibr/Desktop/My Files/UCT Work/EEE4120F/_Group Repo/EEE4120F/YODA Project/YODA Project/YODA Project.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/kaibr/Desktop/My Files/UCT Work/EEE4120F/_Group Repo/EEE4120F/YODA Project/YODA Project'
+INFO: [Project 1-313] Project file moved from 'C:/Users/Derick Nyende/Documents/GitHub/YODA Project' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 24 18:21:53 2020...
