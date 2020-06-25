@@ -38,15 +38,21 @@ function encode(imgArr, msg)
             lsb = UInt8(imgArr[h, w]%2);  #lsb of each pixel
             if i <= mlen                #still encoding
                 if msg[i]==1 & lsb==0
+                    println("INCREMENTED")
                     imgArr[h, w] += 1;
                 elseif msg[i]==1 & lsb==0
+                    println("DECREMENTED")
                     imgArr[h, w] -= 1;
                 else
+                    println("continued...")
                     continue            #pixel lsb and msgE[1] equal
                 end
             else                        #Past msg length, clear lsb
                 if lsb==1
+                    println("bit cleared")
                     imgArr[h, w] -= 1;
+                else
+                    println("ignored")
                 end
             end
             i += 1
@@ -64,7 +70,6 @@ save("YODA_image_encoded.jpg", imgE)
 function decode(imgArr)
     n, m = size(imgArr); #Dimensions of Image
     msg = Vector{UInt8}(); #Array of bits of the ascii values
-    message2 = Vector{UInt8}(); #ASCII Values of the message
 
     #retrieve data from message
     for h in 1:n
@@ -73,19 +78,20 @@ function decode(imgArr)
             append!(msg, lsb);          #add lsb to decoded message
         end
     end
-
-    #convert data to text
-
-    mlen = size(msg)[1] #Length of secret message in bits
-    for i in UInt8(1):UInt32(mlen/8) #loop for each byte in message2
-        append!(message2, UInt8(0));
-        for j in 1:8    #loop for each bit in each byte
-            message2[i] += (msg[8*(i-1) + j] << (8 - j));
-        end
-    end
-    msg = String(msg);
     return msg
 end
 
-message2 = decode(imgE);
-println(message2);
+#convert data to text
+msgD = decode(imgE) #Bits of ASCII Values
+mlen = size(msgD)[1] #Length of secret message in bits
+message2 = Vector{UInt8}(); #ASCII Values of the message
+
+for i in UInt(1):UInt(mlen/8) #loop for each byte in message2
+    append!(message2, UInt8(0));
+    for j in 1:8    #loop for each bit in each byte
+        message2[i] += (msgD[8*(i-1) + j] << (8 - j));
+    end
+end
+
+msgFinal = String(message2);
+println(msgFinal);
