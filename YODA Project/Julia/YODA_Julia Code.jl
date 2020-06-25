@@ -17,28 +17,29 @@ using Images, TestImages, Colors, Plots
 #--------------------------------Create Message:--------------------------
 message = "The turkey has left the oven, I repeat, THE TURKEY HAS LEFT THE OVEN!"
 message = Vector{UInt8}(message) #array of ascii values
-msgE = Vector{UInt8}()
+msgE = Vector{UInt8}()          #Array of bits of the ascii values
 for z in message
     append!(msgE, reverse([z & (0x1<<n) != 0 for n in 0:7]))
 end
-mlen = size(msgE)[1]
 
 #-------------------------Retrieve Image Data:---------------------------
 imgO = load("YODA_image_original.jpg")
 imgG = rawview(channelview(Gray.(imgO)))
 save("YODA_image_original_grey.jpg", imgG)
-n, m = size(imgG);
 
 #------------------------Encode Message:---------------------------------
-function encode(imgArr)
+function encode(imgArr, msg)
     i = 1   #counter for encoding progress
+    mlen = size(msg)[1] #Length of secret message in bits
+    n, m = size(imgArr); #Dimensions of Image
+
     for h in 1:n
         for w in 1:m    #loop through pixels
             lsb = UInt8(imgArr[h, w]%2);  #lsb of each pixel
             if i <= mlen                #still encoding
-                if msgE[i]==1 & lsb==0
+                if msg[i]==1 & lsb==0
                     imgArr[h, w] += 1;
-                elseif msgE[i]==1 & lsb==0
+                elseif msg[i]==1 & lsb==0
                     imgArr[h, w] -= 1;
                 else
                     continue            #pixel lsb and msgE[1] equal
@@ -54,32 +55,37 @@ function encode(imgArr)
     return imgArr
 end
 
-imgE = encode(imgG)
+imgE = encode(imgG, msgE);
 
 #-----------------------Save Encoded Image:----------------------------
 save("YODA_image_encoded.jpg", imgE)
 
 #----------------------Decode Message:---------------------------------
-msgD = Vector{UInt8}()
-message2 = Vector{UInt8}()
+function decode(imgArr)
+    n, m = size(imgArr); #Dimensions of Image
+    msg = Vector{UInt8}(); #Array of bits of the ascii values
+    message2 = Vector{UInt8}(); #ASCII Values of the message
 
-function decode(imgArr, msg)
     #retrieve data from message
     for h in 1:n
         for w in 1:m    #loop through pixels
             lsb = UInt8(imgArr[h, w]%2);  #lsb of each pixel
-            append!(msgD, lsb)          #add lsb to decoded message
+            append!(msg, lsb);          #add lsb to decoded message
         end
     end
+
     #convert data to text
-    for i in 0:(mlen/8 - 1) #loop for each byte in message2
-        append!(msg, UInt8(0))
+
+    mlen = size(msg)[1] #Length of secret message in bits
+    for i in UInt8(1):UInt32(mlen/8) #loop for each byte in message2
+        append!(message2, UInt8(0));
         for j in 1:8    #loop for each bit in each byte
-            msg[i] += (msgD[8*i + j] << (8 - j))
+            message2[i] += (msg[8*(i-1) + j] << (8 - j));
         end
     end
-    msg = join(String.(msg))
+    msg = String(msg);
     return msg
 end
 
-message2 = decode(imgE, message2)
+message2 = decode(imgE);
+println(message2);
