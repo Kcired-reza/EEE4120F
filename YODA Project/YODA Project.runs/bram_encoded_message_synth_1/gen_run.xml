@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="bram_encoded_message_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1591788282">
   <File Type="PA-TCL" Name="bram_encoded_message.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="bram_encoded_message_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="bram_encoded_message_reports.tcl"/>
   <File Type="RDS-RDS" Name="bram_encoded_message.vds"/>
   <File Type="RDS-UTIL" Name="bram_encoded_message_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="bram_encoded_message_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="bram_encoded_message.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="bram_encoded_message_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="bram_encoded_message_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/bram_encoded_message">
     <File Path="$PSRCDIR/sources_1/ip/bram_encoded_message/bram_encoded_message.xci">
       <FileInfo>

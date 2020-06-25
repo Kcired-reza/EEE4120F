@@ -107,9 +107,4 @@ module Decoder(
         addra_e = addra_e + 1;
     end
     assign message = final;
-//    always @ (posedge CLK100MHZ & start == 0 & samples < 255) begin
-//        samples <= samples +1;
-//        final <= douta_e;
-//        addra_e <= addra_e +1;
-//    end 
 endmodule
