@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Jun 26 18:59:23 2020
+# Process ID: 11480
+# Current directory: C:/Users/Derick Nyende/Documents/GitHub/EEE4120F/YODA Project/YODA Project/YODA Project.runs/synth_1
+# Command line: vivado.exe -log Decoder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Decoder.tcl
+# Log file: C:/Users/Derick Nyende/Documents/GitHub/EEE4120F/YODA Project/YODA Project/YODA Project.runs/synth_1/Decoder.vds
+# Journal file: C:/Users/Derick Nyende/Documents/GitHub/EEE4120F/YODA Project/YODA Project/YODA Project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Decoder.tcl -notrace

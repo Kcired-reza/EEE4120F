@@ -26,7 +26,7 @@ module Decoder(
     output wire [7:0] message   // 8-bit message to be extracted
     );
     
-    reg start=1;             // Indicates if program is just starting
+    reg start=0;             // Indicates if program is just starting
     reg [7:0] final=0;
     //reg [7:0] char = 8'd255; // stores nmber of characters to retrieve; value will be adjusted once character number is determined 
     reg [18:0] samples=0;     // Keeps track of number of samples stored
@@ -73,25 +73,28 @@ module Decoder(
     ClockDiv CLK1MHZ_Div (CLK100MHZ,CLK1MHZ);
     
 //    initial begin
-//        start <= 1;
-//        //char <= douta_e;    // first byte is stored in char and this represents the number of characters
-//        addra_e <= addra_e + 1;
+//        for (rst_count=0;rst_count<50;rst_count=rst_count+1) begin
+//            dina_d = 8'b0;
+//            addra_d = addra_d + 1;
+//        end
+//            start <=0;
+//            addra_d <= 0;
 //    end
     
     // This always block resets all the addresses in bram_decoded_message to zero at the start
-    always @(posedge CLK1MHZ & start==1) begin
-            dina_d = 8'b0;
-            addra_d = addra_d + 1;
-            rst_count = rst_count+1;
-            if (rst_count == 50) begin
-                // wea_d =0;
-                start <=0;
-                addra_d <= 0;
-            end     
-    end
+//    always @(posedge CLK1MHZ & start==1) begin
+//            dina_d = 8'b0;
+//            addra_d = addra_d + 1;
+//            rst_count = rst_count+1;
+//            if (rst_count == 50) begin
+//                // wea_d =0;
+//                start <=0;
+//                addra_d <= 0;
+//            end     
+//    end
     
      //Main Logic: Runs after BRAM reset is complete
-    always @ (posedge CLK1MHZ & start == 0 & samples < 307201) begin
+    always @ (posedge CLK1MHZ & start == 0 & samples < 6) begin
         //encoded = douta_e;
         temp_decoded[bit] = douta_e[0]; // Puts first bit of extracyed byte into temp register
         

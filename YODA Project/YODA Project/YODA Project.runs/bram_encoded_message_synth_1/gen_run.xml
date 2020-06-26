@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="bram_encoded_message_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1593173425">
+<GenRun Id="bram_encoded_message_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1593184655">
   <File Type="PA-TCL" Name="bram_encoded_message.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="bram_encoded_message_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="bram_encoded_message_reports.tcl"/>

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Derick Nyende/Documents/GitHub/YODA Project/YODA Project.runs/bram_decoded_message_synth_1'
+HD_PWD='C:/Users/Derick Nyende/Documents/GitHub/EEE4120F/YODA Project/YODA Project/YODA Project.runs/bram_decoded_message_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

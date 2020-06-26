@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
 // Date        : Fri Jun  5 23:08:21 2020
 // Host        : Derick running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim {c:/Users/Derick Nyende/Documents/GitHub/YODA Project/YODA
-//               Project.srcs/sources_1/ip/bram_decoded_message/bram_decoded_message_sim_netlist.v}
+// Command     : write_verilog -force -mode funcsim -rename_top bram_decoded_message -prefix
+//               bram_decoded_message_ bram_decoded_message_sim_netlist.v
 // Design      : bram_decoded_message
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -197,7 +197,6 @@ module bram_decoded_message
         .web(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module bram_decoded_message_blk_mem_gen_generic_cstr
    (douta,
     clka,
@@ -228,7 +227,6 @@ module bram_decoded_message_blk_mem_gen_generic_cstr
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module bram_decoded_message_blk_mem_gen_prim_width
    (douta,
     clka,
@@ -259,7 +257,6 @@ module bram_decoded_message_blk_mem_gen_prim_width
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
 module bram_decoded_message_blk_mem_gen_prim_wrapper_init
    (douta,
     clka,
@@ -435,7 +432,6 @@ module bram_decoded_message_blk_mem_gen_prim_wrapper_init
         .WEBWE({1'b0,1'b0,wea,wea}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module bram_decoded_message_blk_mem_gen_top
    (douta,
     clka,
@@ -491,7 +487,7 @@ endmodule
 (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) (* C_WRITE_DEPTH_A = "256" *) 
 (* C_WRITE_DEPTH_B = "256" *) (* C_WRITE_MODE_A = "WRITE_FIRST" *) (* C_WRITE_MODE_B = "WRITE_FIRST" *) 
 (* C_WRITE_WIDTH_A = "8" *) (* C_WRITE_WIDTH_B = "8" *) (* C_XDEVICEFAMILY = "artix7" *) 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_4" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* downgradeipidentifiedwarnings = "yes" *) 
 module bram_decoded_message_blk_mem_gen_v8_4_4
    (clka,
     rsta,
@@ -695,7 +691,6 @@ module bram_decoded_message_blk_mem_gen_v8_4_4
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_4_synth" *) 
 module bram_decoded_message_blk_mem_gen_v8_4_4_synth
    (douta,
     clka,
