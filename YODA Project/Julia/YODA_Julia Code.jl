@@ -15,6 +15,7 @@
 using Images, TestImages, Colors, Plots
 
 #--------------------------------Create Message:--------------------------
+cd(raw"C:\Users\kaibr\Desktop\My Files\UCT Work\EEE4120F\_Group Repo\EEE4120F\YODA Project\Julia")
 textmessage = "START\nThe turkey has left the oven, I repeat, THE TURKEY HAS LEFT THE OVEN!\nFINISH"
 message = Vector{UInt8}(textmessage) #array of ascii values
 msgE = Vector{UInt8}()          #Array of bits of the ascii values
@@ -61,6 +62,19 @@ end
 
 #-----------------------Save Encoded Image:----------------------------
 save("YODA_zebra_encoded.jpg", imgG)
+
+Out1 = load("YODA_zebra_encoded.jpg")
+Out2 = rawview(channelview(Gray.(Out1)))
+
+io = open(raw"C:\Users\kaibr\Desktop\My Files\UCT Work\EEE4120F\_Group Repo\EEE4120F\YODA Project\Julia\raw.txt", "w")
+println(io, "===============     JPEG DATA      =======================")
+println(io, Out1)
+close(io)
+
+io2 = open(raw"C:\Users\kaibr\Desktop\My Files\UCT Work\EEE4120F\_Group Repo\EEE4120F\YODA Project\Julia\channelview.txt", "w")
+println(io2, "===============     JPEG DATA      =======================")
+println(io2, Out2)
+close(io2)
 
 #----------------------Decode Message:---------------------------------
 msgD = Vector{UInt8}(); #Array of bits of the ascii values
