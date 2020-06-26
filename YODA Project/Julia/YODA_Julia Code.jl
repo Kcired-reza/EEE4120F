@@ -15,77 +15,98 @@
 using Images, TestImages, Colors, Plots
 
 #--------------------------------Create Message:--------------------------
-message = "The turkey has left the oven, I repeat, THE TURKEY HAS LEFT THE OVEN!"
-message = Vector{UInt8}(message) #array of ascii values
+cd(raw"C:\Users\kaibr\Desktop\My Files\UCT Work\EEE4120F\_Group Repo\EEE4120F\YODA Project\Julia")
+textmessage = "START\nThe turkey has left the oven, I repeat, THE TURKEY HAS LEFT THE OVEN!\nFINISH"
+message = Vector{UInt8}(textmessage) #array of ascii values
 msgE = Vector{UInt8}()          #Array of bits of the ascii values
 for z in message
     append!(msgE, reverse([z & (0x1<<n) != 0 for n in 0:7]))
 end
 
 #-------------------------Retrieve Image Data:---------------------------
-imgO = load("YODA_image_original.jpg")
+imgO = load("YODA_zebra_original.jpg")
 imgG = rawview(channelview(Gray.(imgO)))
-save("YODA_image_original_grey.jpg", imgG)
+save("YODA_zebra_grey.jpg", imgG)
 
 #------------------------Encode Message:---------------------------------
-function encode(imgArr, msg)
-    i = 1   #counter for encoding progress
-    mlen = size(msg)[1] #Length of secret message in bits
-    n, m = size(imgArr); #Dimensions of Image
+i = 1; #counter for encoding
+mlen = size(msgE)[1] #Length of secret message in bits
+n, m = size(imgG); #Dimensions of Image
+lsb = 0;    #Idk why this has to be here
 
-    for h in 1:n
-        for w in 1:m    #loop through pixels
-            lsb = UInt8(imgArr[h, w]%2);  #lsb of each pixel
-            if i <= mlen                #still encoding
-                if msg[i]==1 & lsb==0
-                    imgArr[h, w] += 1;
-                elseif msg[i]==1 & lsb==0
-                    imgArr[h, w] -= 1;
-                else
-                    continue            #pixel lsb and msgE[1] equal
-                end
-            else                        #Past msg length, clear lsb
-                if lsb==1
-                    imgArr[h, w] -= 1;
-                end
+for h = 1:n
+    for w = 1:m    #loop through pixels
+        global lsb = UInt8(imgG[h, w]%2);  #lsb of each pixel
+        #println(lsb)
+        #println(msg[i])
+        if i <= mlen                #still encoding
+            if (msgE[i]==1) & (lsb==0)
+                #println("INCREMENTED")
+                global imgG[h, w] += 1;
             end
-            i += 1
+            if (msgE[i]==0) & (lsb==1)
+                #println("DECREMENTED")
+                global imgG[h, w] -= 1;
+            end
+        else                        #Past msg length, clear lsb
+            if lsb==1
+                #println("bit cleared")
+                global imgG[h, w] -= 1;
+            else
+                #println("ignored")
+            end
         end
+        global i += 1
     end
-    return imgArr
 end
-
-imgE = encode(imgG, msgE);
 
 #-----------------------Save Encoded Image:----------------------------
-save("YODA_image_encoded.jpg", imgE)
+save("YODA_zebra_encoded.jpg", imgG)
+
+Out1 = load("YODA_zebra_encoded.jpg")
+Out2 = rawview(channelview(Gray.(Out1)))
+
+io = open(raw"C:\Users\kaibr\Desktop\My Files\UCT Work\EEE4120F\_Group Repo\EEE4120F\YODA Project\Julia\raw.txt", "w")
+println(io, "===============     JPEG DATA      =======================")
+println(io, Out1)
+close(io)
+
+io2 = open(raw"C:\Users\kaibr\Desktop\My Files\UCT Work\EEE4120F\_Group Repo\EEE4120F\YODA Project\Julia\channelview.txt", "w")
+println(io2, "===============     JPEG DATA      =======================")
+println(io2, Out2)
+close(io2)
 
 #----------------------Decode Message:---------------------------------
-function decode(imgArr)
-    n, m = size(imgArr); #Dimensions of Image
-    msg = Vector{UInt8}(); #Array of bits of the ascii values
-    message2 = Vector{UInt8}(); #ASCII Values of the message
+msgD = Vector{UInt8}(); #Array of bits of the ascii values
 
-    #retrieve data from message
-    for h in 1:n
-        for w in 1:m    #loop through pixels
-            lsb = UInt8(imgArr[h, w]%2);  #lsb of each pixel
-            append!(msg, lsb);          #add lsb to decoded message
-        end
+#retrieve data from message
+for h = 1:n
+    for w = 1:m    #loop through pixels
+        global lsb = UInt8(imgG[h, w]%2);  #lsb of each pixel
+        append!(msgD, lsb);          #add lsb to decoded message
     end
-
-    #convert data to text
-
-    mlen = size(msg)[1] #Length of secret message in bits
-    for i in UInt8(1):UInt32(mlen/8) #loop for each byte in message2
-        append!(message2, UInt8(0));
-        for j in 1:8    #loop for each bit in each byte
-            message2[i] += (msg[8*(i-1) + j] << (8 - j));
-        end
-    end
-    msg = String(msg);
-    return msg
 end
 
-message2 = decode(imgE);
-println(message2);
+#convert data to text
+message2 = Vector{UInt8}(); #ASCII Values of the message
+mlen2 = UInt16(size(msgD)[1]/8)
+byteval = 0;
+power = 0;
+stopcode = Vector{UInt8}("FINISH");
+
+for j = 1:mlen2 #loop for each byte in message2
+    global byteval = UInt8(0);
+    for k = 1:8    #loop for each bit in each byte
+        global lsb = msgD[8*(j-1) + k]
+        global power = 2^(8-k)
+        global byteval += lsb*power
+    end
+    append!(message2, byteval);
+    if (j>6)
+        if (message2[j-5:j]) == stopcode
+            break;
+        end
+    end
+end
+msgFinal = String(message2);
+println(msgFinal)
