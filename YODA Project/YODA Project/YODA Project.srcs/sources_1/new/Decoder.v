@@ -29,7 +29,7 @@ module Decoder(
     reg start=1;             // Indicates if program is just starting
     reg [7:0] final=0;
     //reg [7:0] char = 8'd255; // stores nmber of characters to retrieve; value will be adjusted once character number is determined 
-    reg [7:0] samples=0;     // Keeps track of number of samples stored
+    reg [18:0] samples=0;     // Keeps track of number of samples stored
     reg [3:0] bit=-1;           // Keeps track of number bits captured for a byte          
     reg [7:0] temp_decoded=0;  // Temporary storage of stored bits, will end up as byte to be recorded
     reg [7:0] encoded=0;       // Encoded byte from image   
@@ -91,7 +91,7 @@ module Decoder(
     end
     
      //Main Logic: Runs after BRAM reset is complete
-    always @ (posedge CLK1MHZ & start == 0 & samples < 255) begin
+    always @ (posedge CLK1MHZ & start == 0 & samples < 307201) begin
         //encoded = douta_e;
         temp_decoded[bit] = douta_e[0]; // Puts first bit of extracyed byte into temp register
         
